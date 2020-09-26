@@ -26,7 +26,7 @@ function build_chart(data){
       ],
       borderWidth: 1,
       label: '分析準確率',
-      data: [21, 48, 89]
+      data: [{!!$accuracy[0]!!}, {!!$accuracy[1]!!}, {!!$accuracy[2]!!}]
     }]
   }
   });

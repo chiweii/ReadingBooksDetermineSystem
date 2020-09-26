@@ -31,7 +31,7 @@
     </div>
     <div class="x_content">
 	    <div class="alert alert-success alert-dismissible fade in" role="alert">
-	        <strong>適讀年段建議 : </strong> 高年段
+	        <strong>適讀年段建議 : </strong> {{$recommand_block}}
 	    </div>
 	</div>
   </div>
