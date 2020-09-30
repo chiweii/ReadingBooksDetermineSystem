@@ -25,7 +25,7 @@ function build_chart(data){
         'rgba(75, 192, 192, 1)'
       ],
       borderWidth: 1,
-      label: '分析準確率',
+      label: '可信度',
       data: [{!!$accuracy[0]!!}, {!!$accuracy[1]!!}, {!!$accuracy[2]!!}]
     }]
   }
@@ -34,6 +34,6 @@ function build_chart(data){
 </script>
 <style>
   canvas {
-   background-color: rgb(190, 203, 229);
+    background-color: rgb(190, 203, 229);
 }
 </style>

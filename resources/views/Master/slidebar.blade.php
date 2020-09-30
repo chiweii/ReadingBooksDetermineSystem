@@ -28,7 +28,7 @@
               <li><a href="{{ route('dashboard') }}">文本管理</a></li>
             </ul>
           </li>
-          <li><a><i class="fa fa-edit"></i>文本分析<span class="fa fa-chevron-down"></span></a>
+          <li><a><i class="fa fa-edit"></i>閱讀文本年段分析<span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
               <li><a href="{{ route('textImport') }}">文字輸入</a></li>
               <li><a href="{{ route('textUpload') }}">上傳圖檔</a></li>
@@ -47,7 +47,7 @@
         <h3>使用者區塊</h3>
         <ul class="nav side-menu">
           <li><a href="{{ route('dashboard') }}"><i class="fa fa-dashboard"></i>儀表板</a></li>
-          <li><a><i class="fa fa-edit"></i>文本分析<span class="fa fa-chevron-down"></span></a>
+          <li><a><i class="fa fa-edit"></i>閱讀文本年段分析<span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
               <li><a href="{{ route('textImport') }}">文字輸入</a></li>
               <li><a href="{{ route('textUpload') }}">上傳圖檔</a></li>
