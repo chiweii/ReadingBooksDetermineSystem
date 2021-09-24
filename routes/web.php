@@ -15,6 +15,8 @@
 
 Route::get('/',[ 'as' => 'IntroPage', 'uses' => 'IntroduceController@IntroPage']);
 
+
+//登入身分
 Route::group(['prefix' => 'user'], function () {
     Route::group(['prefix' => 'auth'], function () {
         Route::get('login',[ 'as' => 'login', 'uses' => 'UserAuthController@LoginPage']);
@@ -26,9 +28,9 @@ Route::group(['prefix' => 'user'], function () {
 Route::group(['middleware' => 'auth'], function () {
 	Route::get('dashboard',[ 'as' => 'dashboard', 'uses' => 'DashboardController@dashboardPage']);
 
-	Route::get('books', 'Admin\CrawlerController@test');
-	Route::get('ReadTc', 'Admin\CrawlerReadTcController@MainPage');
-	Route::get('search', 'Admin\CrawlerController@searchBooksUrl');
+	Route::get('books', 'Admin\Crawler\CrawlerController@test');
+	Route::get('ReadTc', 'Admin\Crawler\CrawlerReadTcController@MainPage');
+	Route::get('search', 'Admin\Crawler\CrawlerController@searchBooksUrl');
 
 	Route::group(['namespace'=>'Common'], function () {
 		Route::get('textUpload', [ 'as' => 'textUpload', 'uses' => 'TextController@textUploadPage']);

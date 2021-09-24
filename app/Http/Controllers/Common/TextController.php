@@ -76,14 +76,15 @@ class TextController extends Controller
             "  " => ',',
             " " => ',',
         );
-        // dd($python_result, $result['recommand']);
+        
         $recommand = strtr($result['recommand'],$replace_arr); //推薦年段 0:低年段,1:中年段,2:高年段
         $accuracy = explode(",",strtr($result['accuracy'],$replace_arr)); //推薦準確率 0:低年段準確率,1:中年段準確率,2:高年段準確率
+        
         // dd($python_result, $result['recommand'],$recommand,$accuracy);
         foreach ($accuracy as $key => $value) {
             $accuracy[$key] = number_format($value, 15)*100;
         }
-
+        // dd($accuracy, $recommand);
         switch ($recommand) {
             case 0:
                 $recommand_block = '低年段';

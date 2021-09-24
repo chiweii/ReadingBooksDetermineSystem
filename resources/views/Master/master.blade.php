@@ -19,6 +19,7 @@
     <link href="{{ URL::asset('Master/vendors/iCheck/skins/flat/green.css') }}" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="{{ URL::asset('js/sweetalert.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.7/dist/loadingoverlay.min.js"></script>
 
   </head>
 <style type="text/css" media="screen">

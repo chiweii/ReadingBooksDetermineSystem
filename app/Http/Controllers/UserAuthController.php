@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Auth;
 
 use App\Datasheet\Users;
-use Alert;
+
 class UserAuthController extends Controller
 {
     public function LoginPage(){
@@ -32,7 +32,8 @@ class UserAuthController extends Controller
         $login_valid = Validator::make($input, $rules);
 
         if($login_valid->fails()){
-            return redirect('/login')->withErrors($login_valid)->withInput();
+            alert()->error('Email或密碼有誤', '登入錯誤')->autoclose(2000);
+            return Redirect::to('/user/auth/login');
         }
 
         $user = Users::where('user_email',$input['mem_email'])->where([['user_pass', md5($input['mem_password'])]])->first();
@@ -46,20 +47,20 @@ class UserAuthController extends Controller
                 session()->put('user',$user);
                 return redirect()->intended('/dashboard');
             }else{
-                Alert::error('此帳號已停用，請聯繫管理者。', '登入錯誤')->autoclose(2000);
-                return Redirect::to('/login');
+                alert()->error('此Email已停用，請聯繫管理者。', '登入錯誤')->autoclose(2000);
+                return Redirect::to('/user/auth/login');
             }
         }else{
-            Alert::error('帳號或密碼有誤', '登入錯誤')->autoclose(2000);
-            return Redirect::to('/login');
+            alert()->error('Email或密碼有誤', '登入錯誤')->autoclose(2000);
+            return Redirect::to('/user/auth/login');
         }
     }
 
     public function LogoutProcess(){
         if (Auth::check()) {
             Auth::logout();
-            Alert::success('祝您有美好的一天', '登出成功')->autoclose(2000);
-            return Redirect::to('/');
+            alert()->success('祝您有美好的一天', '登出成功')->autoclose(2000);
+            return Redirect::to('/user/auth/login');
         }else{
             return redirect('/');
         }

@@ -8,7 +8,7 @@ class IntroduceController extends Controller
 {
     public function IntroPage(){
     	$binding = [
-    		'title' => '兒童文本查詢及內容判別分類系統',
+    		'title' => '兒童文本自動分級系統',
     	];
 
     	return view('Intro.IntroducePage', $binding);

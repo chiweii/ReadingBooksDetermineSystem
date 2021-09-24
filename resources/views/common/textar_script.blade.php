@@ -11,7 +11,7 @@ function build_chart(data){
   var myChart = new Chart(ctx, {
   type: 'bar',
   data: {
-    labels: ['低年級', '中年級', '高年級'],
+    labels: ['低年段', '中年段', '高年段'],
     datasets: [{
       backgroundColor: [
         'rgba(255, 99, 132, 1)',
@@ -25,10 +25,28 @@ function build_chart(data){
         'rgba(75, 192, 192, 1)'
       ],
       borderWidth: 1,
-      label: '可信度',
+      label: '信任度',
       data: [{!!$accuracy[0]!!}, {!!$accuracy[1]!!}, {!!$accuracy[2]!!}]
     }]
-  }
+  },options: {
+      title: {
+        display: true,
+        text: '兒童文本分析結果'
+      },
+      legend: {
+        display: false,
+        labels: {
+          display: false
+        }
+      },scales: {
+        yAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: '信任度(confidence level)'
+          }
+        }],
+      }
+    },
   });
 }
 </script>

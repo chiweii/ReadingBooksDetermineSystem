@@ -8,7 +8,7 @@
           <ul class="site-menu main-menu js-clone-nav mx-auto d-none d-lg-block  m-0 p-0">
             <li><a href="#home-section" class="nav-link">簡介</a></li>
             <!-- <li><a href="#courses-section" class="nav-link">文本推薦</a></li> -->
-            <li><a href="#system-section" class="nav-link">系統介紹</a></li>
+            <li><a href="#system-section" class="nav-link">系統技術與期望</a></li>
             <li><a href="#team-section" class="nav-link">開發團隊</a></li>
           </ul>
         </nav>

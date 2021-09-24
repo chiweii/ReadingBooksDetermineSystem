@@ -20,9 +20,11 @@
 
     <!-- Custom Theme Style -->
     <link href="{{ URL::asset('Master/build/css/custom.min.css')}}" rel="stylesheet">
+    
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </head>
-
   <body class="login">
+    @include('sweet::alert')
     <div>
       <a class="hiddenanchor" id="signup"></a>
       <a class="hiddenanchor" id="signin"></a>
@@ -42,14 +44,14 @@
               
               <div>
                 <a class="btn btn-info submit" onClick="document.forms['login_form'].submit();">登入</a>
-                <a class="btn btn-warning" href="#">忘記密碼</a>
+                <!-- <a class="btn btn-warning" href="#">忘記密碼</a> -->
               </div>
 
               <div class="clearfix"></div>
 
               <div class="separator">
                 <p class="change_link">
-                  <a href="#" class="btn btn-success"> 申請帳號 </a>
+                  <!-- <a href="#" class="btn btn-success"> 申請帳號 </a> -->
                   <a href="{{ route('IntroPage') }}" class="btn btn-danger"> 回首頁 </a>
                 </p>
                 <div class="clearfix"></div>

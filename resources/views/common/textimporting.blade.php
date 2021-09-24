@@ -38,5 +38,8 @@
 <script src="/vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>
 <script>
     $('#analysis_writing').ckeditor(); // if class is prefered.
+    $( "#add_btn" ).click(function() {
+      $.LoadingOverlay("show");
+    });
 </script>
 @endsection

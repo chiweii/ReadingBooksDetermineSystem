@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{ URL::asset('Intropage/fonts/flaticon/font/flaticon.css')}}">
     <link rel="stylesheet" href="{{ URL::asset('Intropage/css/aos.css')}}">
     <!-- <link rel="stylesheet" href="{{ URL::asset('Intropage/css/style.css')}}"> -->
+    <script src="{{ URL::asset('js/sweetalert.min.js') }}"></script>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   </head>
   <style type="text/css" media="screen">
@@ -61,6 +62,5 @@
   <script src="{{ URL::asset('Intropage/js/jquery.fancybox.min.js')}}"></script>
   <script src="{{ URL::asset('Intropage/js/jquery.sticky.js')}}"></script>
   <script src="{{ URL::asset('Intropage/js/main.js')}}"></script>
-  <script src="{{ URL::asset('js/sweetalert.min.js') }}"></script>
   </body>
 </html>

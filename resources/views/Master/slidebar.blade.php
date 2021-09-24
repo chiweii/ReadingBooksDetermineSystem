@@ -1,7 +1,7 @@
 <div class="col-md-3 left_col menu_fixed">
   <div class="left_col scroll-view">
     <div class="navbar nav_title" style="border: 0;">
-      <a href="/dashboard" class="site_title"><i class="fa fa-pencil"></i> <span>兒童文本分類系統</span></a>
+      <a href="/dashboard" class="site_title"><i class="fa fa-pencil"></i> <span>兒童文本分級系統</span></a>
     </div>
 
     <div class="clearfix"></div>
@@ -47,13 +47,13 @@
         <h3>使用者區塊</h3>
         <ul class="nav side-menu">
           <li><a href="{{ route('dashboard') }}"><i class="fa fa-dashboard"></i>儀表板</a></li>
-          <li><a><i class="fa fa-edit"></i>閱讀文本年段分析<span class="fa fa-chevron-down"></span></a>
+          <li><a><i class="fa fa-edit"></i>兒童文本合適年段分析<span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-              <li><a href="{{ route('textImport') }}">文字輸入</a></li>
-              <li><a href="{{ route('textUpload') }}">上傳圖檔</a></li>
+              <li><a href="{{ route('textImport') }}">文本輸入</a></li>
+              <!-- <li><a>上傳圖檔(功能開發中)</a></li> -->
             </ul>
           </li>
-          <li><a href="{{ route('BooksSearch') }}"><i class="fa fa-bar-chart-o"></i>書籍年段分類查詢</a></li>
+          <!-- <li><a href="{{ route('BooksSearch') }}"><i class="fa fa-bar-chart-o"></i>書籍年段分類查詢</a></li> -->
         </ul>
       </div>
     </div>
